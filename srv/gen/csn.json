@@ -1,0 +1,25 @@
+{
+  "sources": {
+    "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\db\\ExtraInfo.cds": "﻿using User from './User';\r\nusing Id from './User';\r\n\r\n\t\tentity Address {\r\n\t\t    key adid : Id;\r\n\t\t    usid : String(4);\r\n\t\t    city : String(100);\r\n\t\t    strt : String(100);\r\n\t\t    hnum : Integer;\r\n\t\t};\r\n\r\n\t\tentity Cars {\r\n\t\t    key crid : Id;\r\n\t\t    usid : String(4);\r\n\t\t    name : String(100);\r\n\r\n    \t\ttoUser : association to one User on toUser.usid = usid;\r\n\t\t};\r\n",
+    "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\srv\\UserService.cds": "using User as _User from '../db/User';\r\nusing Address as _Address from '../db/ExtraInfo';\r\nusing Cars as _Cars from '../db/ExtraInfo';\r\n\r\nservice odata {\r\n\r\n  entity Users @(\r\n\t\ttitle: 'Users',\r\n\t\tCapabilities: {\r\n\t\t\tInsertRestrictions: {Insertable: false},\r\n\t\t\tUpdateRestrictions: {Updatable: false},\r\n\t\t\tDeleteRestrictions: {Deletable: false}\r\n\t\t}\r\n\t) as projection on _User;\r\n\r\n  entity Address @(\r\n\t\ttitle: 'Address',\r\n\t\tCapabilities: {\r\n\t\t\tInsertRestrictions: {Insertable: false},\r\n\t\t\tUpdateRestrictions: {Updatable: false},\r\n\t\t\tDeleteRestrictions: {Deletable: false}\r\n\t\t}\r\n\t) as projection on _Address;\r\n\r\n    entity Cars @(\r\n\t\ttitle: 'Cars',\r\n\t\tCapabilities: {\r\n\t\t\tInsertRestrictions: {Insertable: false},\r\n\t\t\tUpdateRestrictions: {Updatable: false},\r\n\t\t\tDeleteRestrictions: {Deletable: false}\r\n\t\t}\r\n\t) as projection on _Cars;\r\n\r\n}\r\n",
+    "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\db\\User.cds": "﻿type Id : String(4);\nusing Cars from './ExtraInfo';\nusing Address from './ExtraInfo';\n\nentity User {\n    key usid : Id;\n    name : String(100);\n\n    toCars : association to many Cars on toCars.usid = usid;\n    toAddress : association to one Address on toAddress.usid = usid;\n};\n"
+  },
+  "dependencies": {
+    "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\srv\\UserService.cds": {
+      "../db/User": "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\db\\User.cds",
+      "../db/ExtraInfo": "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\db\\ExtraInfo.cds"
+    },
+    "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\db\\ExtraInfo.cds": {
+      "./User": "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\db\\User.cds"
+    },
+    "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\db\\User.cds": {
+      "./ExtraInfo": "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\db\\ExtraInfo.cds"
+    }
+  },
+  "files": [
+    "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\srv\\UserService.cds",
+    "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\db\\ExtraInfo.cds",
+    "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\db\\User.cds"
+  ],
+  "srv": "D:\\08 T1000 - SAP HANA Cloud Platform (Course H)\\00 Course Materials\\40 Extra Materials\\HiMTA_03\\backend\\srv"
+}

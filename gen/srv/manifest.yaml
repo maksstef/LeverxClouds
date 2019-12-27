@@ -1,0 +1,7 @@
+---
+applications:
+- name: lev_srv
+  path: .
+  memory: 128M
+  services:
+  - backend-db-hdi-container

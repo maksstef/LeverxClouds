@@ -1,0 +1,128 @@
+{
+      "VCAP_SERVICES": {
+      "connectivity": [
+      {
+      "binding_name": null,
+      "credentials": {
+      "clientid": "sb-clone512b1c11422749838caf2704ad39e9c5!b32343|connectivity!b17",
+      "clientsecret": "zBa/y7apQD/A/FstZxpOGOUdDhM=",
+      "identityzone": "p2001944761trial",
+      "onpremise_proxy_host": "connectivityproxy.internal.cf.eu10.hana.ondemand.com",
+      "onpremise_proxy_ldap_port": "20001",
+      "onpremise_proxy_port": "20003",
+      "onpremise_proxy_rfc_port": "20001",
+      "onpremise_socks5_proxy_port": "20004",
+      "tenantid": "5d84a3d5-3ee3-4072-bbc5-738914389409",
+      "tenantmode": "dedicated",
+      "uaadomain": "authentication.eu10.hana.ondemand.com",
+      "url": "https://p2001017289trial.authentication.eu10.hana.ondemand.com",
+      "verificationkey": "-----BEGIN PUBLIC KEY-----MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwThn6OO9kj0bchkOGkqYBnV1dQ3zU/xtj7Kj7nDd8nyRMcEWCtVzrzjzhiisRhlrzlRIEY82wRAZNGKMnw7cvCwNixcfcDJnjzgr2pJ+5/yDZUc0IXXyIWPZD+XdL+0EogC3d4+fqyvg/BF/F0t2hKHWr/UTXE6zrGhBKaL0d8rKfYd6olGWigFd+3+24CKI14zWVxUBtC+P9Fhngc9DRzkXqhxOK/EKn0HzSgotf5duq6Tmk9DCNM4sLW4+ERc6xzrgbeEexakabvax/Az9WZ4qhwgw+fwIhKIC7WLwCEJaRsW4m7NKkv+eJR2LKYesuQ9SVAJ3EXV86RwdnH4uAv7lQHsKURPVAQBlranSqyQu0EXs2N9OlWTxe+FyNkIvyZvoLrZl/CdlYc8AKxRm5rn2/88nkrYQ0XZSrnICM5FRWgVF2hn5KfZGwtBN85/D4Yck6B3ocMfyX7e4URUm9lRPQFUJGTXaZnEIge0R159HUwhTN1HvyXrs6uT1ZZmW+c3p47dw1+LmUf/hIf8zd+uvHQjIeHEJqxjqfyA8yqAFKRHKVFrwnwdMHIsRap2EKBhHMfeVf0P2th5C9MggYoGCvdIaIUgMBX3TtCdvGrcWML7hnyS2zkrlA8SoKJnRcRF2KxWKs355FhpHpzqyZflO5l98+O8wOsFjGpL9d0ECAwEAAQ==-----END PUBLIC KEY-----",
+      "xsappname": "clone512b1c11422749838caf2704ad39e9c5!b32343|connectivity!b17"
+      },
+      "instance_name": "fic_conn",
+      "label": "connectivity",
+      "name": "fic_conn",
+      "plan": "lite",
+      "provider": null,
+      "syslog_drain_url": null,
+      "tags": [
+      "connectivity",
+      "conn",
+      "connsvc"
+      ],
+      "volume_mounts": []
+      }
+      ],
+      "destination": [
+      {
+      "binding_name": null,
+      "credentials": {
+      "clientid": "sb-clone4726c85440144aed8c35c7bc32cbae4b!b32343|destination-xsappname!b404",
+      "clientsecret": "lMpaY/FDL9ElYI+jF/8JY5cgDdA=",
+      "identityzone": "p2001944761trial",
+      "instanceid": "4726c854-4014-4aed-8c35-c7bc32cbae4b",
+      "tenantid": "5d84a3d5-3ee3-4072-bbc5-738914389409",
+      "tenantmode": "dedicated",
+      "uaadomain": "authentication.eu10.hana.ondemand.com",
+      "uri": "https://destination-configuration.cfapps.eu10.hana.ondemand.com",
+      "url": "https://p2001944761trial.authentication.eu10.hana.ondemand.com",
+      
+      "verificationkey": "-----BEGIN PUBLIC KEY-----MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwThn6OO9kj0bchkOGkqYBnV1dQ3zU/xtj7Kj7nDd8nyRMcEWCtVzrzjzhiisRhlrzlRIEY82wRAZNGKMnw7cvCwNixcfcDJnjzgr2pJ+5/yDZUc0IXXyIWPZD+XdL+0EogC3d4+fqyvg/BF/F0t2hKHWr/UTXE6zrGhBKaL0d8rKfYd6olGWigFd+3+24CKI14zWVxUBtC+P9Fhngc9DRzkXqhxOK/EKn0HzSgotf5duq6Tmk9DCNM4sLW4+ERc6xzrgbeEexakabvax/Az9WZ4qhwgw+fwIhKIC7WLwCEJaRsW4m7NKkv+eJR2LKYesuQ9SVAJ3EXV86RwdnH4uAv7lQHsKURPVAQBlranSqyQu0EXs2N9OlWTxe+FyNkIvyZvoLrZl/CdlYc8AKxRm5rn2/88nkrYQ0XZSrnICM5FRWgVF2hn5KfZGwtBN85/D4Yck6B3ocMfyX7e4URUm9lRPQFUJGTXaZnEIge0R159HUwhTN1HvyXrs6uT1ZZmW+c3p47dw1+LmUf/hIf8zd+uvHQjIeHEJqxjqfyA8yqAFKRHKVFrwnwdMHIsRap2EKBhHMfeVf0P2th5C9MggYoGCvdIaIUgMBX3TtCdvGrcWML7hnyS2zkrlA8SoKJnRcRF2KxWKs355FhpHpzqyZflO5l98+O8wOsFjGpL9d0ECAwEAAQ==-----END PUBLIC KEY-----",
+      "xsappname": "clone4726c85440144aed8c35c7bc32cbae4b!b32343|destination-xsappname!b404"
+      },
+      "instance_name": "fic_dest",
+      "label": "destination",
+      "name": "fic_dest",
+      "plan": "lite",
+      "provider": null,
+      "syslog_drain_url": null,
+      "tags": [
+      "destination",
+      "conn",
+      "connsvc"
+      ],
+      "volume_mounts": []
+      }
+      ],
+      "hanatrial": [
+      {
+      "binding_name": null,
+      "credentials": {
+      "host": "zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com",
+      "port": "23803",
+      "encrypt": true,
+      "sslValidateCertificate": false,
+      "driver": "com.sap.db.jdbc.Driver",
+      "url": "jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true\u0026validateCertificate=true\u0026currentschema=FIC_SCP",
+      "schema": "FIC_SCP",
+      "hdi_user": "FIC_SCP_0RKC19SP3FJ62Q9SYGPR5EST4_DT",
+      "hdi_password": "Jl0AVhT4_n304kPbmcJ7kiBwbmMrq1m_cRDAUF1BL-8-ZnB2uSQ-lpWsP9.yfaCLUI0ZxngW3KsIE86F32ATHGiddatdCn0Nd0k14ldJe0uQ0nsRo5VuOIb0zg5G3NNv",
+      "user": "FIC_SCP_0RKC19SP3FJ62Q9SYGPR5EST4_RT",
+      "password": "At07KfNJHEM2ovgw41Ybt4Mf_T8D1x.bf1QTeCq8UJkjnCGqxLdW7bGm7HVqI54kl4QICKe8jteiBSu8sJDXwP7.7a.OjWK.5I-_P3QVPM_HHXI3FBDKdj9IbN9DwsIH"
+      },
+      "instance_name": "fic_hdi",
+      "label": "hanatrial",
+      "name": "fic_hdi",
+      "plan": "hdi-shared",
+      "provider": null,
+      "syslog_drain_url": null,
+      "tags": [
+      "hana",
+      "database",
+      "relational"
+      ],
+      "volume_mounts": []
+      }
+      ],
+      "xsuaa": [
+      {
+      "binding_name": null,
+      "credentials": {
+      "clientid": "sb-HiMTA!t32343",
+      "clientsecret": "hNM1yxQ3T9/l3C/zeelrSXCrRxc=",
+      "identityzone": "p2001944761trial",
+      "identityzoneid": "5d84a3d5-3ee3-4072-bbc5-738914389409",
+      "sburl": "https://internal-xsuaa.authentication.eu10.hana.ondemand.com",
+      "tenantid": "5d84a3d5-3ee3-4072-bbc5-738914389409",
+      "tenantmode": "dedicated",
+      "uaadomain": "authentication.eu10.hana.ondemand.com",
+      "url": "https://p2001944761trial.authentication.eu10.hana.ondemand.com",
+      "verificationkey": "-----BEGIN PUBLIC KEY-----MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwThn6OO9kj0bchkOGkqYBnV1dQ3zU/xtj7Kj7nDd8nyRMcEWCtVzrzjzhiisRhlrzlRIEY82wRAZNGKMnw7cvCwNixcfcDJnjzgr2pJ+5/yDZUc0IXXyIWPZD+XdL+0EogC3d4+fqyvg/BF/F0t2hKHWr/UTXE6zrGhBKaL0d8rKfYd6olGWigFd+3+24CKI14zWVxUBtC+P9Fhngc9DRzkXqhxOK/EKn0HzSgotf5duq6Tmk9DCNM4sLW4+ERc6xzrgbeEexakabvax/Az9WZ4qhwgw+fwIhKIC7WLwCEJaRsW4m7NKkv+eJR2LKYesuQ9SVAJ3EXV86RwdnH4uAv7lQHsKURPVAQBlranSqyQu0EXs2N9OlWTxe+FyNkIvyZvoLrZl/CdlYc8AKxRm5rn2/88nkrYQ0XZSrnICM5FRWgVF2hn5KfZGwtBN85/D4Yck6B3ocMfyX7e4URUm9lRPQFUJGTXaZnEIge0R159HUwhTN1HvyXrs6uT1ZZmW+c3p47dw1+LmUf/hIf8zd+uvHQjIeHEJqxjqfyA8yqAFKRHKVFrwnwdMHIsRap2EKBhHMfeVf0P2th5C9MggYoGCvdIaIUgMBX3TtCdvGrcWML7hnyS2zkrlA8SoKJnRcRF2KxWKs355FhpHpzqyZflO5l98+O8wOsFjGpL9d0ECAwEAAQ==-----END PUBLIC KEY-----",
+      "xsappname": "HiMTA!t32343"
+      },
+      "instance_name": "fic_uaa",
+      "label": "xsuaa",
+      "name": "fic_uaa",
+      "plan": "application",
+      "provider": null,
+      "syslog_drain_url": null,
+      "tags": [
+      "xsuaa"
+      ],
+      "volume_mounts": []
+      }
+      ]
+      }
+      }
+      
+      

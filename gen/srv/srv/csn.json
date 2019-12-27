@@ -1,0 +1,301 @@
+{
+  "definitions": {
+    "Address": {
+      "kind": "entity",
+      "elements": {
+        "adid": {
+          "key": true,
+          "type": "Id",
+          "length": 4
+        },
+        "usid": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "city": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "strt": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "hnum": {
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "Cars": {
+      "kind": "entity",
+      "elements": {
+        "crid": {
+          "key": true,
+          "type": "Id",
+          "length": 4
+        },
+        "usid": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "toUser": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "User",
+          "on": [
+            {
+              "ref": [
+                "toUser",
+                "usid"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "usid"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "Id": {
+      "kind": "type",
+      "type": "cds.String",
+      "length": 4
+    },
+    "User": {
+      "kind": "entity",
+      "elements": {
+        "usid": {
+          "key": true,
+          "type": "Id",
+          "length": 4
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "toCars": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "Cars",
+          "on": [
+            {
+              "ref": [
+                "toCars",
+                "usid"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "usid"
+              ]
+            }
+          ]
+        },
+        "toAddress": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "Address",
+          "on": [
+            {
+              "ref": [
+                "toAddress",
+                "usid"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "usid"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "odata": {
+      "kind": "service",
+      "@source": "srv/UserService.cds"
+    },
+    "odata.Address": {
+      "kind": "entity",
+      "@Capabilities.DeleteRestrictions.Deletable": false,
+      "@Capabilities.InsertRestrictions.Insertable": false,
+      "@Capabilities.UpdateRestrictions.Updatable": false,
+      "@title": "Address",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "Address"
+            ],
+            "as": "_Address"
+          }
+        }
+      },
+      "elements": {
+        "adid": {
+          "key": true,
+          "type": "Id",
+          "length": 4
+        },
+        "usid": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "city": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "strt": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "hnum": {
+          "type": "cds.Integer"
+        }
+      },
+      "$syntax": "projection"
+    },
+    "odata.Cars": {
+      "kind": "entity",
+      "@Capabilities.DeleteRestrictions.Deletable": false,
+      "@Capabilities.InsertRestrictions.Insertable": false,
+      "@Capabilities.UpdateRestrictions.Updatable": false,
+      "@title": "Cars",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "Cars"
+            ],
+            "as": "_Cars"
+          }
+        }
+      },
+      "elements": {
+        "crid": {
+          "key": true,
+          "type": "Id",
+          "length": 4
+        },
+        "usid": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "toUser": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "odata.Users",
+          "on": [
+            {
+              "ref": [
+                "toUser",
+                "usid"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "usid"
+              ]
+            }
+          ]
+        }
+      },
+      "$syntax": "projection"
+    },
+    "odata.Users": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "User"
+            ],
+            "as": "_User"
+          }
+        }
+      },
+      "elements": {
+        "usid": {
+          "key": true,
+          "type": "Id",
+          "length": 4
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "toCars": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "odata.Cars",
+          "on": [
+            {
+              "ref": [
+                "toCars",
+                "usid"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "usid"
+              ]
+            }
+          ]
+        },
+        "toAddress": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "odata.Address",
+          "on": [
+            {
+              "ref": [
+                "toAddress",
+                "usid"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "usid"
+              ]
+            }
+          ]
+        }
+      },
+      "$syntax": "projection"
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.20.3"
+  },
+  "$version": "1.0"
+}

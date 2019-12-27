@@ -1,0 +1,9 @@
+---
+applications:
+- name: lev_db
+  path: .
+  no-route: true
+  health-check-type: process
+  memory: 128M
+  services:
+  - backend-db-hdi-container
