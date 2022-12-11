@@ -13,7 +13,7 @@
     ],
     "dependencies": {
         "@sap/cds": "^3.5.2",
-        "express": "^4.16.4",
+        "express": "^4.18.2",
         "hdb": "^0.17.0"
     },
     "scripts": {
